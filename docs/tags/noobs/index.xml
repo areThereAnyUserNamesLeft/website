@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Noobs on Written using Hugo</title>
-    <link>http://arethereanyusernamesleft.github.io/tags/noobs/</link>
+    <link>http://arethereanyusernamesleft.github.io/arethereanyusernamesleft/tags/noobs/</link>
     <description>Recent content in Noobs on Written using Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Sat, 12 May 2018 15:35:16 +0100</lastBuildDate>
     
-	<atom:link href="http://arethereanyusernamesleft.github.io/tags/noobs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://arethereanyusernamesleft.github.io/arethereanyusernamesleft/tags/noobs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>FirstImpressions</title>
-      <link>http://arethereanyusernamesleft.github.io/post/firstimpressions/</link>
+      <link>http://arethereanyusernamesleft.github.io/arethereanyusernamesleft/post/firstimpressions/</link>
       <pubDate>Sat, 12 May 2018 15:35:16 +0100</pubDate>
       
-      <guid>http://arethereanyusernamesleft.github.io/post/firstimpressions/</guid>
+      <guid>http://arethereanyusernamesleft.github.io/arethereanyusernamesleft/post/firstimpressions/</guid>
       <description>These are my thoughts, I&amp;rsquo;m basing these on what I have heard, read or experienced - if I am misinformed, I am sorry - correct me, by all means but I am not purposfully spouting my own brand of nonsense or mistruth. Let me know and I&amp;rsquo;ll try to edit where I am wrong
 Try Go - These are my impressions after using Golang as my main language for 6 weeks If you came upon Go recently the chances are you&amp;rsquo;ve come upon the Tour of Go.</description>
     </item>
