@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Written using Hugo</title>
+    <link>http://arethereanyusernamesleft.github.io/tags/</link>
+    <description>Recent content in Tags on Written using Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sat, 12 May 2018 19:25:19 +0100</lastBuildDate>
+    
+	<atom:link href="http://arethereanyusernamesleft.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Else</title>
+      <link>http://arethereanyusernamesleft.github.io/tags/else/</link>
+      <pubDate>Sat, 12 May 2018 19:25:19 +0100</pubDate>
+      
+      <guid>http://arethereanyusernamesleft.github.io/tags/else/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>http://arethereanyusernamesleft.github.io/tags/golang/</link>
+      <pubDate>Sat, 12 May 2018 15:35:16 +0100</pubDate>
+      
+      <guid>http://arethereanyusernamesleft.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>If</title>
+      <link>http://arethereanyusernamesleft.github.io/tags/if/</link>
+      <pubDate>Sat, 12 May 2018 19:25:19 +0100</pubDate>
+      
+      <guid>http://arethereanyusernamesleft.github.io/tags/if/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Noobs</title>
+      <link>http://arethereanyusernamesleft.github.io/tags/noobs/</link>
+      <pubDate>Sat, 12 May 2018 15:35:16 +0100</pubDate>
+      
+      <guid>http://arethereanyusernamesleft.github.io/tags/noobs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

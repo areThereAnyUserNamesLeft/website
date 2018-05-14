@@ -1,0 +1,8 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/areThereAnyUserNamesLeft/areThereAnyUserNamesLeft.git
+	branch = master
+[submodule "public/public"]
+	path = public/public
+	url = https://github.com/areThereAnyUserNamesLeft/areThereAnyUserNamesLeft.git
+	branch = master
