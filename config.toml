@@ -1,9 +1,9 @@
-baseURL = "https://arethereanyusernamesleft.github.io/"
+baseURL = "https://arethereanyusernamesleft.github.io/website/"
 defaultContentLanguage = "en"
 languageCode = "en-GB"
 title = "Written using Hugo"
 theme = "dream"
-publishDir = "docs"
+publishDir = "docs/website/"
 archetypesDir = "archetypes"
 buildDrafts = false
 about = "content/about/desc.md"
