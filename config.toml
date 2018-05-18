@@ -1,4 +1,4 @@
-baseURL = "https://arethereanyusernamesleft.github.io/website/"
+baseURL = "https://arethereanyusernamesleft.github.io/"
 defaultContentLanguage = "en"
 languageCode = "en-GB"
 title = "Written using Hugo"
