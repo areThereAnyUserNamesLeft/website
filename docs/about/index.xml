@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Written using Hugo</title>
-    <link>/about/</link>
+    <link>https://arethereanyusernamesleft.github.io/website/about/</link>
     <description>Recent content in Abouts on Written using Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     
-	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://arethereanyusernamesleft.github.io/website/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/about/desc/</link>
+      <link>https://arethereanyusernamesleft.github.io/website/about/desc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/desc/</guid>
+      <guid>https://arethereanyusernamesleft.github.io/website/about/desc/</guid>
       <description>I began writing Go professionally in 2018 after several years as a web / App developer with a background in Linux, NodeJS, Delphi and Python.
 This blog is just some fun so I can look back and see where I started in Golang and some of my thoughts along the way. If you come accross it I hope my experiences help you.
 func mkBlog() (b *blog, err Error){ // Worry about content later.</description>

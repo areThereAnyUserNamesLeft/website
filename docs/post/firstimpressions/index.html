@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Written using Hugo</title>
+
+  
+  
+  <meta name="author" content="Richard Pape" />
+  <meta name="description" content="These are my thoughts, I&amp;rsquo;m basing these on what I have heard, read or experienced - if I am misinformed, I am sorry - correct me, by all means but I am not purposfully spouting my own brand of nonsense or mistruth. Let me know and I&amp;rsquo;ll try to edit where I am wrong
+Try Go - These are my impressions after using Golang as my main language for 6 weeks If you came upon Go recently the chances are you&amp;rsquo;ve come upon the Tour of Go." />
+
+
+
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+<meta name="generator" content="Hugo 0.40.3" />
+
+
+<link rel="canonical" href="https://arethereanyusernamesleft.github.io/website/post/firstimpressions/" />
+<link rel="alternative" href="../../website/index.xml" title="Written using Hugo" type="application/atom+xml" />
+
+<link href="https://cdn.bootcss.com/semantic-ui/2.2.14/semantic.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../../css/site.css" />
+
+
+</head>
+
+<body>
+  <div class="flip-container">
+    <div class="flipper">
+      <section class="front">
+        
+<nav class="ui top secondary menu">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <a href="../../">
+      <i class="inverted big link home icon" title="Home"></i>
+    </a>
+  </div>
+</nav>
+ 
+<div class="ui centered grid">
+  <div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list post-single-main">
+
+    <section class="ui secondary top attached black segment">
+      <a class="ui black right corner label" href="javascript:void(0)" onclick="savePostAsImg()">
+        <i class="save icon"></i>
+      </a>
+      <header>
+        <h1 class="ui header">
+          FirstImpressions
+          <div class="sub header">@ Richard Pape · May 12, 2018 · 5 min read · Update at May 12, 2018</div>
+        </h1>
+      </header>
+      <article class="post-content" style="margin-top: 2rem; font-size: 1.4rem;">
+
+<p><em>These are my thoughts, I&rsquo;m basing these on what I have heard, read or experienced - if I am misinformed, I am sorry - correct me, by all means but I am not purposfully spouting my own brand of nonsense or mistruth. Let me know and I&rsquo;ll try to edit where I am wrong</em></p>
+
+<h1 id="try-go-these-are-my-impressions-after-using-golang-as-my-main-language-for-6-weeks">Try Go - These are my impressions after using Golang as my main language for 6 weeks</h1>
+
+<p><img src="../../imgs/code-gopherE.png" alt="Gopher with checkered flag" />
+If you came upon Go recently the chances are you&rsquo;ve come upon the <a href="https:tour.golang.org/welcome/1">Tour of Go</a>.</p>
+
+<p>I did the tour mid 2017 - I spent a few evenings playing with it. Exciting stuff for me a self taught developer who&rsquo;s
+always wanted one language to beat them all - LOTR style.</p>
+
+<p>In 2018 I bought a good Go book(<a href="https://books.google.co.uk/books?id=SJHvCgAAQBAJ&amp;printsec=frontcover&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false">The Go Programming Language - by Alan A. A. Donovan, Brian W. Kernighan</a> - This book is pretty best if you are transitioning to Go from another language, and want a rounded view of it all) and took it away on holiday to read and really, since then almost everything has been pretty Go focused.</p>
+
+<h1 id="the-story-so-far">The story so far&hellip;</h1>
+
+<p>The best way to understand why I have been attracted to Go is to look at my past list of languages I&rsquo;ve put time into.</p>
+
+<p><strong>PYTHON</strong>
+ I see myself as a big a Python fan even now, Python is awesome especially for data science, but Python is
+apparently slow and awesome in equal parts.</p>
+
+<p><strong>RUBY</strong>
+ I love Ruby for similar reasons to Python, it has a lot of good stuff going for it but I&rsquo;ve always been wary that there was not a lot of jobs using it near me so I have never used it for more than side projects.</p>
+
+<p><strong>NODEJS</strong>
+JS has never been a favorite but I have clocked many hours using it and I can write it pretty well in the browser and NodeJS has been fun to play with, especially the async
+stuff for building CLI tools. In fact JS is really good fun but to be honest I found it easier to write bad JS than I found it to write
+good JS, or didn&rsquo;t feel I could always tell the difference (I best move on as I am probably not qualified to backup[ that statement)</p>
+
+<p><strong>C,C++,C#,Java, Delphi</strong> All these fall into the same category - cool but often they seem too complicated, C and C++ are rarely used on
+the web and to ignore the web is pretty much ignoring a big part of life. Using C# and Java have a
+really good chance of employment but C# is better developed on Windows (I am a Linux fanboy) and when I dabbled in Java (and Delphi for that matter) it always seemed to
+trip over it&rsquo;s own releases and be needing me to write more than was needed in another language.</p>
+
+<p>I could go on - <strong>PHP, Scala, Julia, Rust, Elixir, R</strong> I&rsquo;ve dabbled and enjoyed bits of them all to a degree but <strong>Go</strong> grabbed
+me as a more rounded language worth spending more time on.</p>
+
+<h1 id="why-go">Why Go?:</h1>
+
+<p>Is a fair question, hopefully these seem like fair answers:</p>
+
+<ul>
+<li><strong>Fast</strong> - If I am going stop using Python I was needing something that addressed it&rsquo;s achillies heel - speed.</li>
+<li><strong>Statically typed / Lazy assignment</strong> - I wanted to learn to use a statically typed language mainly to allow me to segue into being a more rounded programmer but I&rsquo;m lazy when it comes to writing <code>var ... string</code>. Go allows you to statically type but does not make you if it is not needed with the &ldquo;magic&rdquo;<code>:=</code> assignment - a nice feature that got me interested.</li>
+<li><strong>Lazy formatting</strong> - Most languages have a defined style like PEP8 in Python and house styles of companies which create needless friction among programmers. The Go team just decided to build a
+formatter into the language from early on. Write bad code and then throw it to the formatter.</li>
+<li><strong>No semi colons</strong> - This is a lie there are semi colons but they are added by the compiler rather than the
+programmer except for in a few instances where they are needed.</li>
+<li><strong>Optional OOP / Functional</strong> - I&rsquo;m an advocate of using the right tool for the job, Go lets you choose the method you feel is best and also mix them. Arguably some other languages do too but Go seems to have a good balance of this.</li>
+<li><strong>ASYNC / Concurrency</strong> - This is a massive topic in modern languages, Go has been built to do this as standard other
+languages have evolved to do this as an after thought. Go routines and channels blew my mind.</li>
+<li><strong>Readability</strong> - I&rsquo;ve already mentioned laziness twice. I read code as much as I write it, if not more, I don&rsquo;t want to write 10 lines when one line will do and I don&rsquo;t wan to read 10 lines of code when one will do. Go is
+easy to read - Win win.</li>
+</ul>
+
+<h1 id="conclusion">Conclusion:</h1>
+
+<p>Go in my eyes deserves all the excitement It is getting right now. It is fast, each release is apparently backwards
+compatible, it has an easy import system built into it, it is flexible, it has a thriving community, lots of projects
+use it (Kubenetes, Hugo, HashiCorp) &amp; it has a robust test suite built in. Employment wise I
+can only see it becoming more popular. Go Try Go, you might like it.</p>
+</article>
+    </section>
+
+    <footer class="ui secondary attached segment dream-tags">
+      
+      
+      <a class="ui label" href="../../website/tags/golang" title="golang">golang</a>
+      
+      <a class="ui label" href="../../website/tags/noobs" title="noobs">noobs</a>
+      
+      
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="fifteen wide mobile fifteen wide tablet four wide computer column">
+
+    <section class="ui top attached center aligned inverted segment">
+  <div class="ui small circular image">
+    
+    <img src="imgs/whatElse.png">
+    
+  </div>
+  <h3 class="ui header">Richard Pape&#39;s blog<div class="sub header" style="color: white;">wHaT ELse?</div>
+  </h3>
+
+  <div class="ui inverted horizontal list">
+    
+    <a class="item" href="../../post">
+      <i class="archive icon" title="Archives"></i>
+    </a>
+    
+    <a class="item" href="../../tags">
+      <i class="tags icon" title="All Tags"></i>
+    </a>
+    <a class="item" href="../../categories">
+      <i class="inverted cubes icon" title="All Categories"></i>
+    </a>
+  </div>
+
+  <a id="tag-category-pop" class="ui red right corner label">
+    <i class="pointing down icon" title="Click this to pop tags and categories"></i>
+  </a>
+</section>
+
+
+<section class="ui attached center aligned inverted segment dream-header-tags dream-tags">
+  
+  <a class="ui label" href="../../website/tags/else" title="else">else</a>
+  
+  <a class="ui label" href="../../website/tags/golang" title="golang">golang</a>
+  
+  <a class="ui label" href="../../website/tags/if" title="if">if</a>
+  
+  <a class="ui label" href="../../website/tags/noobs" title="noobs">noobs</a>
+  
+</section>
+
+
+
+
+<section class="ui bottom attached center aligned inverted segment">
+    
+    <p>© 2018 Written using Hugo</p>
+    
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+</section>
+
+
+  </div>
+</div>
+
+      </section>
+      <section class="back">
+        <nav class="ui top secondary menu" style="overflow-x: auto">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  
+  <div class="item">
+    <a href="mailto:r1ch4rdP4p3@gmail.com">
+      <i class="inverted big mail icon" title="email"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://github.com/areThereAnyUserNamesLeft" target="_blank">
+      <i class="inverted big github icon" title="github"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://www.linkedin.com/in/richard-pape-b4237b99" target="_blank">
+      <i class="inverted big linkedin icon" title="linkedin"></i>
+    </a>
+  </div>
+  
+  
+  
+</nav>
+
+<div class="ui centered grid about">
+  <div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
+
+    <section class="ui stacked segments">
+      <header class="ui inverted segment">
+        <h2 class="ui header">
+          About me
+        </h2>
+      </header>
+
+      <article class="ui inverted segment back-about">
+        <div class="ui stackable three column grid">
+          <div class="column">
+              
+              <p>I began writing Go professionally in 2018 after several years as a web / App developer with a background in Linux, NodeJS, Delphi and Python.</p>
+
+<p>This
+blog is just some fun so I can look back and see where I started in Golang and some of my thoughts along the way. If you
+come accross it I hope my experiences help you.</p>
+
+<pre><code class="language-go">func mkBlog() (b *blog, err Error){
+    // Worry about content later...
+    return
+}
+</code></pre>
+
+<h5 id="the-above-function-pretty-much-sums-up-the-begining">The above function pretty much sums up the begining&hellip;</h5>
+
+              
+          </div>
+          <div class="column">
+              
+          </div>
+          <div class="column">
+              
+          </div>
+        </div>
+      </article>
+
+      
+
+      
+      
+    </section>
+
+  </div>
+</div>
+
+      </section>
+    </div>
+  </div>
+
+  
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+<script src="../../js/html2canvas.min.js"></script>
+<script src="../../js/bg.js"></script>
+<script src="../../js/site.js"></script>
+
+
+
+</body>
+
+</html>

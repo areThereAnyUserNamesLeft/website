@@ -3,67 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/whatelse/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/post/whatelse/</loc>
     <lastmod>2018-05-12T19:25:19+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/firstimpressions/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/post/firstimpressions/</loc>
     <lastmod>2018-05-12T15:35:16+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/desc/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/about/desc/</loc>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/about/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/else/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/tags/else/</loc>
     <lastmod>2018-05-12T19:25:19+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/golang/</loc>
-    <lastmod>2018-05-12T15:35:16+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/if/</loc>
-    <lastmod>2018-05-12T19:25:19+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/noobs/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/tags/golang/</loc>
     <lastmod>2018-05-12T15:35:16+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/tags/if/</loc>
     <lastmod>2018-05-12T19:25:19+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/tags/noobs/</loc>
+    <lastmod>2018-05-12T15:35:16+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arethereanyusernamesleft.github.io/website/post/</loc>
     <lastmod>2018-05-12T19:25:19+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://arethereanyusernamesleft.github.io/website/tags/</loc>
+    <lastmod>2018-05-12T19:25:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arethereanyusernamesleft.github.io/website/</loc>
     <lastmod>2018-05-12T19:25:19+01:00</lastmod>
     <priority>0</priority>
   </url>

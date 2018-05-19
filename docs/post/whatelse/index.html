@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Written using Hugo</title>
+
+  
+  
+  <meta name="author" content="Richard Pape" />
+  <meta name="description" content="What &amp;ldquo;Else&amp;rdquo;? The setup Want to know a cool principal in Go?
+Golang discourages unneeded code, it slows the compiler, can cost compute resources and makes it less readable and ugly.
+One thing pattern you&amp;rsquo;ll get used to seeing goes something like this:
+foo, err := doThingThatMayGoWrong(bar)  Unpacking this, doThingThatMayGoWrong() is a function which returns two things one being an error and the other being a meaningful var." />
+
+
+
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+<meta name="generator" content="Hugo 0.40.3" />
+
+
+<link rel="canonical" href="https://arethereanyusernamesleft.github.io/website/post/whatelse/" />
+<link rel="alternative" href="../../website/index.xml" title="Written using Hugo" type="application/atom+xml" />
+
+<link href="https://cdn.bootcss.com/semantic-ui/2.2.14/semantic.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../../css/site.css" />
+
+
+</head>
+
+<body>
+  <div class="flip-container">
+    <div class="flipper">
+      <section class="front">
+        
+<nav class="ui top secondary menu">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <a href="../../">
+      <i class="inverted big link home icon" title="Home"></i>
+    </a>
+  </div>
+</nav>
+ 
+<div class="ui centered grid">
+  <div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list post-single-main">
+
+    <section class="ui secondary top attached black segment">
+      <a class="ui black right corner label" href="javascript:void(0)" onclick="savePostAsImg()">
+        <i class="save icon"></i>
+      </a>
+      <header>
+        <h1 class="ui header">
+          What &#39;Else&#39;?
+          <div class="sub header">@ Richard Pape · May 12, 2018 · 3 min read · Update at May 12, 2018</div>
+        </h1>
+      </header>
+      <article class="post-content" style="margin-top: 2rem; font-size: 1.4rem;">
+
+<h1 id="what-else">What &ldquo;Else&rdquo;?</h1>
+
+<p><img src="../../imgs/whatElse.png" alt="Gopher saying - What Else with laptop" /></p>
+
+<h2 id="the-setup">The setup</h2>
+
+<p>Want to know a cool principal in Go?</p>
+
+<p>Golang discourages unneeded code, it slows the compiler, can cost compute resources and makes it less readable and ugly.</p>
+
+<p>One thing pattern you&rsquo;ll get used to seeing goes something like this:</p>
+
+<pre><code class="language-go">
+foo, err := doThingThatMayGoWrong(bar)
+
+</code></pre>
+
+<p>Unpacking this, doThingThatMayGoWrong() is a function which returns two things one being an error and the other being
+a meaningful var.</p>
+
+<p>You might see it written like this?</p>
+
+<pre><code class="language-go">_, err := doThingThatMayGoWrong(bar)
+</code></pre>
+
+<p>The difference being the underscore - a slight tangent underscores are used in Go to declare a variable that you know
+you are not going to use.</p>
+
+<h2 id="the-punchline">The punchline</h2>
+
+<p>In most languages this is how errors might be handled:</p>
+
+<pre><code class="language-go">if err == nil {
+    // Panic? 
+} else {
+    // Do this
+}
+</code></pre>
+
+<p>Go programmers try to use variations on this form:</p>
+
+<pre><code class="language-go">if err != nil {
+    return 
+}// Do this
+</code></pre>
+
+<p><strong>* Keep reading the &ldquo;Bonus&rdquo; section if you don&rsquo;t get the empty return</strong></p>
+
+<p>So what is good here is that the programmer is returning the error which makes the else redundant as it won&rsquo;t be called
+if there is an err because the function will stop here. This, check negative outcomes (or fail fast and recover) approach prevents alot of unessessary code
+from running making programs faster.</p>
+
+<p>I should mention that Go does have an <code>else</code> but it is used much less due to the approach.</p>
+
+<h2 id="bonus">Bonus</h2>
+
+<p>This leads me on to another neat Go-ism which I am going to digress into.</p>
+
+<p>Read this function :</p>
+
+<pre><code class="language-go">func mayGoWrong(foo int, bar string) (str string, err error) { // Note the &quot;named returns&quot; str &amp; err
+
+	if foo != len(bar) {
+		err = errors.New(&quot;Error: the string needs to be equal length to the int&quot;)
+		return
+	}
+	for i:=0; i &lt; foo;i++ {
+		fmt.Print(string(bar[i]))
+		str += string(bar[i])
+	}
+	return
+}
+</code></pre>
+
+<p>Ok, lets unpack this.</p>
+
+<ol>
+<li>The func accepts an <em>int</em> (<code>foo</code>) and a <em>string</em> (<code>bar</code>)</li>
+
+<li><p>The func has two named args set in the brackets at after the <code>foo/bar</code> args. These are a <em>string</em> called <code>str</code> and
+an <em>error</em> called <code>err</code>. This line could be rewritten as:</p>
+
+<pre><code class="language-go">func mayGoWrong(foo int, bar string) (string, error) {
+var str string
+var err error
+//...
+//...
+return str, err
+}
+    
+</code></pre></li>
+
+<li><p>Another cool thing, Go has default values for every thing you declare in this case an <code>error == nil</code> and a <code>string ==
+&quot;&quot;</code>. So as soon as the function names these variables in as named return values you can assume that when return is
+called their current value will be used even if they are still using their default values. So errors are nil unless you
+meant changed that.</p></li>
+</ol>
+
+<p>Thats a good thing for reading code and for lazy programmers like me!</p>
+</article>
+    </section>
+
+    <footer class="ui secondary attached segment dream-tags">
+      
+      
+      <a class="ui label" href="../../website/tags/if" title="if">if</a>
+      
+      <a class="ui label" href="../../website/tags/else" title="else">else</a>
+      
+      
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="fifteen wide mobile fifteen wide tablet four wide computer column">
+
+    <section class="ui top attached center aligned inverted segment">
+  <div class="ui small circular image">
+    
+    <img src="imgs/whatElse.png">
+    
+  </div>
+  <h3 class="ui header">Richard Pape&#39;s blog<div class="sub header" style="color: white;">wHaT ELse?</div>
+  </h3>
+
+  <div class="ui inverted horizontal list">
+    
+    <a class="item" href="../../post">
+      <i class="archive icon" title="Archives"></i>
+    </a>
+    
+    <a class="item" href="../../tags">
+      <i class="tags icon" title="All Tags"></i>
+    </a>
+    <a class="item" href="../../categories">
+      <i class="inverted cubes icon" title="All Categories"></i>
+    </a>
+  </div>
+
+  <a id="tag-category-pop" class="ui red right corner label">
+    <i class="pointing down icon" title="Click this to pop tags and categories"></i>
+  </a>
+</section>
+
+
+<section class="ui attached center aligned inverted segment dream-header-tags dream-tags">
+  
+  <a class="ui label" href="../../website/tags/else" title="else">else</a>
+  
+  <a class="ui label" href="../../website/tags/golang" title="golang">golang</a>
+  
+  <a class="ui label" href="../../website/tags/if" title="if">if</a>
+  
+  <a class="ui label" href="../../website/tags/noobs" title="noobs">noobs</a>
+  
+</section>
+
+
+
+
+<section class="ui bottom attached center aligned inverted segment">
+    
+    <p>© 2018 Written using Hugo</p>
+    
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+</section>
+
+
+  </div>
+</div>
+
+      </section>
+      <section class="back">
+        <nav class="ui top secondary menu" style="overflow-x: auto">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  
+  <div class="item">
+    <a href="mailto:r1ch4rdP4p3@gmail.com">
+      <i class="inverted big mail icon" title="email"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://github.com/areThereAnyUserNamesLeft" target="_blank">
+      <i class="inverted big github icon" title="github"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://www.linkedin.com/in/richard-pape-b4237b99" target="_blank">
+      <i class="inverted big linkedin icon" title="linkedin"></i>
+    </a>
+  </div>
+  
+  
+  
+</nav>
+
+<div class="ui centered grid about">
+  <div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
+
+    <section class="ui stacked segments">
+      <header class="ui inverted segment">
+        <h2 class="ui header">
+          About me
+        </h2>
+      </header>
+
+      <article class="ui inverted segment back-about">
+        <div class="ui stackable three column grid">
+          <div class="column">
+              
+              <p>I began writing Go professionally in 2018 after several years as a web / App developer with a background in Linux, NodeJS, Delphi and Python.</p>
+
+<p>This
+blog is just some fun so I can look back and see where I started in Golang and some of my thoughts along the way. If you
+come accross it I hope my experiences help you.</p>
+
+<pre><code class="language-go">func mkBlog() (b *blog, err Error){
+    // Worry about content later...
+    return
+}
+</code></pre>
+
+<h5 id="the-above-function-pretty-much-sums-up-the-begining">The above function pretty much sums up the begining&hellip;</h5>
+
+              
+          </div>
+          <div class="column">
+              
+          </div>
+          <div class="column">
+              
+          </div>
+        </div>
+      </article>
+
+      
+
+      
+      
+    </section>
+
+  </div>
+</div>
+
+      </section>
+    </div>
+  </div>
+
+  
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+<script src="../../js/html2canvas.min.js"></script>
+<script src="../../js/bg.js"></script>
+<script src="../../js/site.js"></script>
+
+
+
+</body>
+
+</html>
