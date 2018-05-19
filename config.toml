@@ -2,8 +2,12 @@ baseURL = "https://arethereanyusernamesleft.github.io/website/"
 defaultContentLanguage = "en"
 languageCode = "en-GB"
 title = "Written using Hugo"
+themeDir = "themes/"
 theme = "dream"
-publishDir = "static"
+publishDir = "docs/"
+staticDir = "static/"
+relativeURLs = true
+
 archetypesDir = "archetypes"
 buildDrafts = false
 about = "content/about/desc.md"
@@ -11,7 +15,7 @@ about = "content/about/desc.md"
 [params]
   author = "Richard Pape"
   description = ""
-  avatar = "/imgs/whatElse.png"
+  avatar = "imgs/whatElse.png"
   motto = "wHaT ELse?"
 
   email = "r1ch4rdP4p3@gmail.com"
