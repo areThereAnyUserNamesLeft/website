@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>If on Written using Hugo</title>
-    <link>/tags/if/</link>
+    <link>https://arethereanyusernamesleft.github.io/website/tags/if/</link>
     <description>Recent content in If on Written using Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Sat, 12 May 2018 19:25:19 +0100</lastBuildDate>
     
-	<atom:link href="/tags/if/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://arethereanyusernamesleft.github.io/website/tags/if/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What &#39;Else&#39;?</title>
-      <link>/post/whatelse/</link>
+      <link>https://arethereanyusernamesleft.github.io/website/post/whatelse/</link>
       <pubDate>Sat, 12 May 2018 19:25:19 +0100</pubDate>
       
-      <guid>/post/whatelse/</guid>
+      <guid>https://arethereanyusernamesleft.github.io/website/post/whatelse/</guid>
       <description>What &amp;ldquo;Else&amp;rdquo;? The setup Want to know a cool principal in Go?
 Golang discourages unneeded code, it slows the compiler, can cost compute resources and makes it less readable and ugly.
 One thing pattern you&amp;rsquo;ll get used to seeing goes something like this:
