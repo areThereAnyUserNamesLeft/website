@@ -4,6 +4,7 @@ languageCode = "en-GB"
 title = "Written using Hugo"
 theme = "dream"
 publishDir = "docs/"
+staticDir = "docs/static/"
 relativeURLs = true
 
 archetypesDir = "archetypes"
