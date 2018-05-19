@@ -2,10 +2,8 @@ baseURL = "https://arethereanyusernamesleft.github.io/website/"
 defaultContentLanguage = "en"
 languageCode = "en-GB"
 title = "Written using Hugo"
-themeDir = "themes/"
 theme = "dream"
 publishDir = "docs/"
-staticDir = "static/"
 relativeURLs = true
 
 archetypesDir = "archetypes"
